@@ -76,7 +76,7 @@ describe "GIT" do
 
   it "11. What command do you run to update the local master branch with the
       master branch on the remote 'upstream'?" do
-    answer = "git pull upstream master"
+    answer = "git fetch upstream master"
     encoded_answer = "10ce0782f27a2e126f7fe0f12dd189cc16578e26"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -101,7 +101,7 @@ describe "GIT" do
 
   it "14. From the add-img branch, what command do you run to pull down all the changes
       from the add-img branch on the remote 'upstream'?" do
-    answer = "git pull -u origin add-img"
+    answer = "git pull upstream add-img"
     encoded_answer = "6c3209e77d80f4f76e692f6b7a9fb9be17068e3e"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -129,7 +129,7 @@ describe "GIT" do
 
   it "18. What is the one line syntax for creating and switching to a branch called
      'add-nav-bar'?" do
-    answer = "git branch -b add-nav-bar"
+    answer = "git checkout -b add-nav-bar"
     encoded_answer = "f6317616a8601aeb64c0f27f71a4b7bf9e3b8453"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -164,7 +164,7 @@ describe "GIT" do
       that you create: for instance, a branch made off of master will look exactly
       like a branch made off of `add-walrus-and-polar-bear`" do
     # "true" or "false", in a string
-    answer = "true"
+    answer = "false"
 
     encoded_answer = "7cb6efb98ba5972a9b5090dc2e517fe14d12cb04"
     expect(encode(answer)).to eq(encoded_answer)
@@ -221,7 +221,7 @@ describe "GIT" do
 
   it "29. What is the syntax for deleting a remote branch called 'add-img'
       on the remote 'butterfly' using the push and colon syntax?" do
-    answer = "git push origin butterfly:add-img"
+    answer = "git push butterfly:add-img"
     encoded_answer = "9e528dd3bf4ed25f25b148bdc947566883ba785b"
     expect(encode(answer)).to eq(encoded_answer)
   end
